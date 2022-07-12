@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/solusi-equipment-management", {data:[{}],fetch:{},mutations:void 0});
