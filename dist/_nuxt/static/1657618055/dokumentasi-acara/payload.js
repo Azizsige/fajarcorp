@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/dokumentasi-acara", {data:[{}],fetch:{},mutations:void 0});
