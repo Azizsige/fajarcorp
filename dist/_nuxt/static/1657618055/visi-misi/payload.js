@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/visi-misi", {data:[{}],fetch:{},mutations:void 0});

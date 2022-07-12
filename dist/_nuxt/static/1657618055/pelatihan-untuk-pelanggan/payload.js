@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/pelatihan-untuk-pelanggan", {data:[{}],fetch:{},mutations:void 0});

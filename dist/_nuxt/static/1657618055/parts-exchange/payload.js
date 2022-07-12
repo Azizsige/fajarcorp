@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/parts-exchange", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/preventive-maintenance-kits", {data:[{}],fetch:{},mutations:void 0});
