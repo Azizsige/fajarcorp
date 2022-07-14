@@ -1,94 +1,234 @@
 <template>
   <div>
-    <Navbar/>
-    <div class="container mx-auto lg:mb-32 md:mb-16 mb-8 px-8">
-      <h2 class="lg:text-6xl text-yellow-400 font-bold lg:mb-64 md:mb-32 sm:mb-16 mb-8">PERTANIAN/PERKEBUNAN</h2>
-      <a class="bg-yellow-400 text-white lg:py-3 py-1 lg:px-6 px-2 lg:rounded-lg rounded" href="#">Request Quote</a>
+    <Navbar />
+    <div class="wrapper text-center pb-5">
+      <HeroIndustri id="pertanian" />
+      <div class="button">
+        <button
+          type="submit"
+          class="bg-red-500 text-white lg:py-3 py-1 lg:px-6 px-2 lg:rounded-lg rounded"
+          href="#"
+        >
+          Request Quote
+        </button>
+      </div>
     </div>
-    <div class="bg-gray-300">
-      <div class="container mx-auto lg:py-16 md:py-8 py-4 px-8">
-        <h3 class="lg:text-4xl font-bold">PERTANIAN</h3>
-        <div class="pt-8">
-          Indonesia merupakan negara agraris yang memiliki kekayaan alam luar biasa. Di dalam pemanfaat berbagai segmen agraria seperti perkebunan, pertanian, peternakan, dan pemanfaatan hasil air, Trakindo berkomitmen untuk menyediakan solusi lengkap yang efisien dan efektif, mulai dari tahap persiapan lahan, penanaman sampai perawatan. We are ready to advance your agribusiness forward.
+    <div class="w-full">
+      <div
+        class="container flex flex-col space-y-7 xl:space-y-0 xl:flex-row items-center xl:space-x-8 mx-auto lg:py-16 md:py-8 py-4 px-8"
+      >
+        <div class="img">
+          <ClipIndustri
+            class="w-[225rem] h-[18rem] xl:h-96"
+            src="assets/img/pertanian.jpg"
+          />
+        </div>
+        <div class="content">
+          <h3 class="lg:text-4xl font-bold">PERTANIAN</h3>
+          <div class="pt-3 xl:pt-8">
+            Indonesia merupakan negara agraris yang memiliki kekayaan alam luar
+            biasa. Di dalam pemanfaat berbagai segmen agraria seperti
+            perkebunan, pertanian, peternakan, dan pemanfaatan hasil air,
+            Trakindo berkomitmen untuk menyediakan solusi lengkap yang efisien
+            dan efektif, mulai dari tahap persiapan lahan, penanaman sampai
+            perawatan. We are ready to advance your agribusiness forward.
+          </div>
         </div>
       </div>
     </div>
     <div class="container mx-auto lg:py-16 md:py-8 py-4 px-8">
-      <h3 class="lg:text-4xl font-bold">RANTAI NILAI PERTANIAN &amp; PERKEBUNAN</h3>
-      <div class="pt-8">
-        Rantai nilai Pertanian dan Perkebunan menjelaskan kegiatan utama dan aktifitas pendukung dalam industri pertanian dan perkebunan untuk memberikan produk atau layanan ke pasar. Rantai nilai ini akan membantu Anda memilih  alat berat Cat® yang tepat untuk kebutuhan bisnis Anda
+      <h3 class="lg:text-4xl font-bold">RANTAI NILAI</h3>
+      <h4 class="lg:text-xl font-bold">PERTANIAN &amp; PERKEBUNAN</h4>
+      <div class="pt-1">
+        Rantai nilai Pertanian dan Perkebunan menjelaskan kegiatan utama dan
+        aktifitas pendukung dalam industri pertanian dan perkebunan untuk
+        memberikan produk atau layanan ke pasar. Rantai nilai ini akan membantu
+        Anda memilih alat berat Cat® yang tepat untuk kebutuhan bisnis Anda
       </div>
-      <div class="pt-8">
+      <!-- <div class="pt-8">
         <div class="flex flex-wrap border-2 border-yellow-400">
           <div class="w-full">
             <ul class="flex mb-0 list-none pb-4 flex-wrap flex-row">
-              <li class="-mb-px mr-2 last:mr-0 md:flex-1 sm:flex-nowrap text-center">
-                <a class="lg:text-xl md:text-lg sm:text-base text-sm break-words font-bold px-5 py-3 shadow-lg rounded block leading-normal" v-on:click="toggleTabs(1)" v-bind:class="{'text-black bg-yellow-400': openTab !== 1, 'text-black bg-white': openTab === 1}">
+              <li
+                class="-mb-px mr-2 last:mr-0 md:flex-1 sm:flex-nowrap text-center"
+              >
+                <a
+                  class="lg:text-xl md:text-lg sm:text-base text-sm break-words font-bold px-5 py-3 shadow-lg rounded block leading-normal"
+                  v-on:click="toggleTabs(1)"
+                  v-bind:class="{
+                    'text-black bg-yellow-400': openTab !== 1,
+                    'text-black bg-white': openTab === 1,
+                  }"
+                >
                   Industri Kelapa Sawit
                 </a>
               </li>
             </ul>
-            <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6">
+            <div
+              class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6"
+            >
               <div class="px-4 flex-auto">
                 <div class="tab-content tab-space">
-                  <div v-bind:class="{'hidden': openTab !== 1, 'block': openTab === 1}">
+                  <div
+                    v-bind:class="{
+                      hidden: openTab !== 1,
+                      block: openTab === 1,
+                    }"
+                  >
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">1. Infrastruktur</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        1. Infrastruktur
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
-                        Untuk membuka area baru kelapa sawit, hal pertama yang harus dibangun adalah akses jalan dan kanal mengacu pada desain perkebunan. PT Trakindo Utama memiliki pilihan alat berat terbaik untuk kegiatan persiapan infrastruktur menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP), Cat Track Type Tractors / Dozer (D5R XL, D6R XL), Cat Motor Grader (120K), dan Cat Vibratory Soil Compactor (CS-533).
+                        Untuk membuka area baru kelapa sawit, hal pertama yang
+                        harus dibangun adalah akses jalan dan kanal mengacu pada
+                        desain perkebunan. PT Trakindo Utama memiliki pilihan
+                        alat berat terbaik untuk kegiatan persiapan
+                        infrastruktur menggunakan Cat Hydraulic Excavator
+                        (320D2, 313D2 LGP), Cat Track Type Tractors / Dozer (D5R
+                        XL, D6R XL), Cat Motor Grader (120K), dan Cat Vibratory
+                        Soil Compactor (CS-533).
                       </div>
                     </div>
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">2. Persiapan Lahan</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        2. Persiapan Lahan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
-                        Pada tahap ini, pohon ditebang menggunakan gergaji, felling head, atau harvester head. Kayu log kemudian dibersihkan dari cabang-cabangnya dengan menggunakan parang, gergaji, atau harvester head. Setelah ditebang, kontraktor akan menyediakan debarked log jika diminta oleh pembeli. Log kemudian dipotong dengan panjang standar tertentu. PT Trakindo Utama memiliki pilihan alat berat terbaik untuk kegiatan pemanenan menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP) dengan SP 591 LX Harvester Head.
+                        Pada tahap ini, pohon ditebang menggunakan gergaji,
+                        felling head, atau harvester head. Kayu log kemudian
+                        dibersihkan dari cabang-cabangnya dengan menggunakan
+                        parang, gergaji, atau harvester head. Setelah ditebang,
+                        kontraktor akan menyediakan debarked log jika diminta
+                        oleh pembeli. Log kemudian dipotong dengan panjang
+                        standar tertentu. PT Trakindo Utama memiliki pilihan
+                        alat berat terbaik untuk kegiatan pemanenan menggunakan
+                        Cat Hydraulic Excavator (320D2, 313D2 LGP) dengan SP 591
+                        LX Harvester Head.
                       </div>
                     </div>
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">3. Penanaman</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        3. Penanaman
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
                         <div class="flex">
                           <div class="w-3/4 mr-2">
                             <h5 class="font-bold">3.a. Penanaman Baru</h5>
-                            Setelah lahan siap seperti yang direncanakan, tahap selanjutnya adalah penanaman bibit kelapa sawit. Kegiatan ini dapat dilakukan secara manual penuh atau semi-otomatis. PT Trakindo Utama memiliki pilihan terbaik untuk penanaman semi-otomatis menggunakan Cat Mini Hydraulic Excavator (305,5) dikombinasikan dengan Cat Auger.
+                            Setelah lahan siap seperti yang direncanakan, tahap
+                            selanjutnya adalah penanaman bibit kelapa sawit.
+                            Kegiatan ini dapat dilakukan secara manual penuh
+                            atau semi-otomatis. PT Trakindo Utama memiliki
+                            pilihan terbaik untuk penanaman semi-otomatis
+                            menggunakan Cat Mini Hydraulic Excavator (305,5)
+                            dikombinasikan dengan Cat Auger.
                           </div>
                           <div class="w-3/12">
-                            <img class="lg:h-36 md:h-32 h-28 lg:w-36 md:w-32 w-28" src="https://www.trakindo.co.id/sites/default/files/inline-images/energy-img1.jpg" alt="">
+                            <img
+                              class="lg:h-36 md:h-32 h-28 lg:w-36 md:w-32 w-28"
+                              src="https://www.trakindo.co.id/sites/default/files/inline-images/energy-img1.jpg"
+                              alt=""
+                            />
                           </div>
                         </div>
                         <div class="flex">
                           <div class="w-3/4 mr-2">
                             <h5 class="font-bold">3.b. Penananman Kembali</h5>
-                            Pada blok yang sudah ditanami pohon kelapa sawit, pohon yang ada harus ditebang terlebih dahulu, dan tunggul kemudian dikelupas. Setelah proses tersebut selesai, penanaman baru dapat dilakukan dengan menggunakan manual penuh atau semi-otomatis. Pada tahap ini, kami memberikan pilihan terbaik untuk pohon kelapa sawit feeling dan chipping menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP) dilengkapi dengan Chipping bucket.
+                            Pada blok yang sudah ditanami pohon kelapa sawit,
+                            pohon yang ada harus ditebang terlebih dahulu, dan
+                            tunggul kemudian dikelupas. Setelah proses tersebut
+                            selesai, penanaman baru dapat dilakukan dengan
+                            menggunakan manual penuh atau semi-otomatis. Pada
+                            tahap ini, kami memberikan pilihan terbaik untuk
+                            pohon kelapa sawit feeling dan chipping menggunakan
+                            Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                            dilengkapi dengan Chipping bucket.
                           </div>
-                          <div class="w-3/12">
-                            
-                          </div>
+                          <div class="w-3/12"></div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">4. Pemeliharaan</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        4. Pemeliharaan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
-                        Jalan di perkebunan Kelapa Sawit dibangun untuk menjadi fasilitas pengangkutan utama dalam pemanenan tandan buah segar (Fress Fruit Bunches – FFB). FFB harus sesegera mungkin dikirim ke pabrik untuk diproses lebih lanjut. Untuk memastikan pengangkutan bisa dilakukan dengan lancar, konstruksi jalan harus dipelihara secara terus menerus. Di samping jalan, kanal juga perlu dipelihara secara teratur sebagai rute transportasi, aliran irigasi, dan aliran drainase. PT Trakindo Utama memiliki alat berat pilihan terbaik untuk pemeliharaan Infrastruktur kelapa sawit menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP, 305,5), Cat Track Type Tractors (D3K XL), dan Cat Backhoe Loader (416F).
+                        Jalan di perkebunan Kelapa Sawit dibangun untuk menjadi
+                        fasilitas pengangkutan utama dalam pemanenan tandan buah
+                        segar (Fress Fruit Bunches – FFB). FFB harus sesegera
+                        mungkin dikirim ke pabrik untuk diproses lebih lanjut.
+                        Untuk memastikan pengangkutan bisa dilakukan dengan
+                        lancar, konstruksi jalan harus dipelihara secara terus
+                        menerus. Di samping jalan, kanal juga perlu dipelihara
+                        secara teratur sebagai rute transportasi, aliran
+                        irigasi, dan aliran drainase. PT Trakindo Utama memiliki
+                        alat berat pilihan terbaik untuk pemeliharaan
+                        Infrastruktur kelapa sawit menggunakan Cat Hydraulic
+                        Excavator (320D2, 313D2 LGP, 305,5), Cat Track Type
+                        Tractors (D3K XL), dan Cat Backhoe Loader (416F).
                       </div>
                     </div>
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">5. Mill</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        5. Mill
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
-                        Tandan Buah Segar (Fress Fruit Bunches – FFB) yang diterima di pabrik akan dipilah pilah di loading ramp untuk memastikan standar mutu FFB terpenuhi. Setelah itu, melalui beberapa perlakuan khusus, FFB akan diperas untuk mengekstrak kandungan minyaknya. Limbah dari proses ini dapat digunakan lagi sebagai bahan bakar biomassa, bahan organik yang berkaitan, atau sebagai bahan untuk produk yang berbeda. Kami memiliki alat berat pilihan terbaik untuk Pabrik Kelapa Sawit dan Pengolahan Limbah menggunakan Cat Wheel Loader 924K, Cat Backhoe Loader 416F, Cat Skid Steer Loader 226B2, Cat Diesel Generator set C Series (C13, C15, dan C18), dan pemanfaatan POME menggunakan Cat Gas Generator set CG Series (CG170, CG132).
+                        Tandan Buah Segar (Fress Fruit Bunches – FFB) yang
+                        diterima di pabrik akan dipilah pilah di loading ramp
+                        untuk memastikan standar mutu FFB terpenuhi. Setelah
+                        itu, melalui beberapa perlakuan khusus, FFB akan diperas
+                        untuk mengekstrak kandungan minyaknya. Limbah dari
+                        proses ini dapat digunakan lagi sebagai bahan bakar
+                        biomassa, bahan organik yang berkaitan, atau sebagai
+                        bahan untuk produk yang berbeda. Kami memiliki alat
+                        berat pilihan terbaik untuk Pabrik Kelapa Sawit dan
+                        Pengolahan Limbah menggunakan Cat Wheel Loader 924K, Cat
+                        Backhoe Loader 416F, Cat Skid Steer Loader 226B2, Cat
+                        Diesel Generator set C Series (C13, C15, dan C18), dan
+                        pemanfaatan POME menggunakan Cat Gas Generator set CG
+                        Series (CG170, CG132).
                       </div>
                     </div>
                     <div>
-                      <h3 class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6">6. Energi Listrik dari POME.</h3>
-                      <hr class="bg-black p-0.5">
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        6. Energi Listrik dari POME.
+                      </h3>
+                      <hr class="bg-black p-0.5" />
                       <div class="lg:text-base text-sm pt-4">
-                        Gas metana yang dihasilkan dari POME (Palm Oil Mill Effluent) oleh bakteri anaerob yang ada di kolam adalah gas yang paling berbahaya bagi lingkungan. Biasanya pabrik kelapa sawit membangun banyak kolam untuk pengolahan POME tanpa mempertimbangkan gas metana yang akan terlepas ke atmosfer, yang pada akhirnya akan menciptakan pemanasan global. Saat ini sudah ada teknologi untuk menangkap gas metana dan mengubahnya menjadi energi melalui aplikasi generator berbahan bakar gas. Caterpillar telah mengumumkan produk Cat CG (MWM diakuisisi pada tahun 2011) untuk aplikasi ini.Produk Cat CG memiliki tiga (3) model yaitu Cat CG132, CG170 dan CG260 dengan rating bervariasi dari 400kW hingga 3.370kW dalam aplikasi biogas. Beberapa perusahaan pertanian telah mengadopsi dan menjalankan teknologi ini untuk mendapatkan sertifikat “Hijau/Ramah lingkungan” bagi produk CPO mereka.
+                        Gas metana yang dihasilkan dari POME (Palm Oil Mill
+                        Effluent) oleh bakteri anaerob yang ada di kolam adalah
+                        gas yang paling berbahaya bagi lingkungan. Biasanya
+                        pabrik kelapa sawit membangun banyak kolam untuk
+                        pengolahan POME tanpa mempertimbangkan gas metana yang
+                        akan terlepas ke atmosfer, yang pada akhirnya akan
+                        menciptakan pemanasan global. Saat ini sudah ada
+                        teknologi untuk menangkap gas metana dan mengubahnya
+                        menjadi energi melalui aplikasi generator berbahan bakar
+                        gas. Caterpillar telah mengumumkan produk Cat CG (MWM
+                        diakuisisi pada tahun 2011) untuk aplikasi ini.Produk
+                        Cat CG memiliki tiga (3) model yaitu Cat CG132, CG170
+                        dan CG260 dengan rating bervariasi dari 400kW hingga
+                        3.370kW dalam aplikasi biogas. Beberapa perusahaan
+                        pertanian telah mengadopsi dan menjalankan teknologi ini
+                        untuk mendapatkan sertifikat “Hijau/Ramah lingkungan”
+                        bagi produk CPO mereka.
                       </div>
                     </div>
                   </div>
@@ -97,53 +237,526 @@
             </div>
           </div>
         </div>
-
-      </div>
-    </div>
-    <hr class="bg-gray-300 p-3">
-    <div class="container mx-auto lg:mb-12 md:mb-6 mb-3 lg:py-16 md:py-8 py-4 px-8">
-      <div class="flex space-x-4 place-content-center">
-        <div class="w-3/4 mr-2">
-          <h3 class="lg:text-4xl">PEMBIAYAAN</h3>
-          <div class="pt-8 mb-8">
-            Untuk membantu pelanggan sektor kehutanan dalam membeli alat berat Cat, Trakindo dapat membantu Anda dalam berhubungan dengan berbagai institusi keuangan rekanan kami. Kami akan memastikan bisnis Anda dapat memperoleh solusi pembayaran yang sesuai dengan kebutuhan dan keperluan operasi kehutanan Anda.
+      </div> -->
+      <div class="pt-8">
+        <div class="flex flex-wrap">
+          <div class="w-full">
+            <ul
+              class="flex mb-0 list-none flex-wrap space-y-1 xl:space-y-0 flex-row"
+            >
+              <li
+                class="-mb-px last:mr-0 md:flex-1 sm:flex-nowrap text-center cursor-pointer"
+              >
+                <a
+                  id="clip_para"
+                  class="md:text-lg text-white bg-[#1ca8e0] sm:text-base border-[#1ca8e0] border-2 text-sm break-words font-bold px-10 py-3 shadow-lg rounded-md block leading-normal"
+                >
+                  Industri Kelapa Sawit
+                </a>
+              </li>
+            </ul>
+            <div
+              class="relative flex flex-row min-w-0 shadow-xl shadow-black break-words bg-white w-full mb-6 border-2 border-[#1ca8e0]"
+            >
+              <div class="flex-auto">
+                <div class="tab-content tab-space">
+                  <div
+                    class="px-8 py-10"
+                    v-bind:class="{
+                      hidden: openTab !== 1,
+                      block: openTab === 1,
+                    }"
+                  >
+                    <div
+                      class="flex-col xl:flex-row items-center flex space-x-0 xl:space-x-5"
+                    >
+                      <div
+                        class="space-y-1 pt-5 xl:pt-0 xl:space-y-3 xl:w-[70%] order-last xl:order-first"
+                      >
+                        <h3
+                          class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3"
+                        >
+                          1. Infrastruktur
+                        </h3>
+                        <hr class="bg-black p-0.5" />
+                        <p class="lg:text-base text-sm">
+                          Untuk membuka area baru kelapa sawit, hal pertama yang
+                          harus dibangun adalah akses jalan dan kanal mengacu
+                          pada desain perkebunan. PT Trakindo Utama memiliki
+                          pilihan alat berat terbaik untuk kegiatan persiapan
+                          infrastruktur menggunakan Cat Hydraulic Excavator
+                          (320D2, 313D2 LGP), Cat Track Type Tractors / Dozer
+                          (D5R XL, D6R XL), Cat Motor Grader (120K), dan Cat
+                          Vibratory Soil Compactor (CS-533).
+                        </p>
+                      </div>
+                      <div class="infra-img">
+                        <img
+                          class="xl:h-[20rem] h-[15rem]"
+                          src="assets/img/insfrastuktur.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        2. Persiapan Lahan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Pada tahap ini, pohon ditebang menggunakan gergaji,
+                        felling head, atau harvester head. Kayu log kemudian
+                        dibersihkan dari cabang-cabangnya dengan menggunakan
+                        parang, gergaji, atau harvester head. Setelah ditebang,
+                        kontraktor akan menyediakan debarked log jika diminta
+                        oleh pembeli. Log kemudian dipotong dengan panjang
+                        standar tertentu. PT Trakindo Utama memiliki pilihan
+                        alat berat terbaik untuk kegiatan pemanenan menggunakan
+                        Cat Hydraulic Excavator (320D2, 313D2 LGP) dengan SP 591
+                        LX Harvester Head.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        3. Penanaman
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        <div class="flex">
+                          <div class="w-3/4 mr-2">
+                            <h5 class="font-bold">3.a. Penanaman Baru</h5>
+                            Setelah lahan siap seperti yang direncanakan, tahap
+                            selanjutnya adalah penanaman bibit kelapa sawit.
+                            Kegiatan ini dapat dilakukan secara manual penuh
+                            atau semi-otomatis. PT Trakindo Utama memiliki
+                            pilihan terbaik untuk penanaman semi-otomatis
+                            menggunakan Cat Mini Hydraulic Excavator (305,5)
+                            dikombinasikan dengan Cat Auger.
+                          </div>
+                          <div class="w-3/12">
+                            <img
+                              class="lg:h-36 md:h-32 h-28 lg:w-36 md:w-32 w-28"
+                              src="https://www.trakindo.co.id/sites/default/files/inline-images/energy-img1.jpg"
+                              alt=""
+                            />
+                          </div>
+                        </div>
+                        <div class="flex">
+                          <div class="w-3/4 mr-2">
+                            <h5 class="font-bold">3.b. Penananman Kembali</h5>
+                            Pada blok yang sudah ditanami pohon kelapa sawit,
+                            pohon yang ada harus ditebang terlebih dahulu, dan
+                            tunggul kemudian dikelupas. Setelah proses tersebut
+                            selesai, penanaman baru dapat dilakukan dengan
+                            menggunakan manual penuh atau semi-otomatis. Pada
+                            tahap ini, kami memberikan pilihan terbaik untuk
+                            pohon kelapa sawit feeling dan chipping menggunakan
+                            Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                            dilengkapi dengan Chipping bucket.
+                          </div>
+                          <div class="w-3/12"></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        4. Pemeliharaan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Jalan di perkebunan Kelapa Sawit dibangun untuk menjadi
+                        fasilitas pengangkutan utama dalam pemanenan tandan buah
+                        segar (Fress Fruit Bunches – FFB). FFB harus sesegera
+                        mungkin dikirim ke pabrik untuk diproses lebih lanjut.
+                        Untuk memastikan pengangkutan bisa dilakukan dengan
+                        lancar, konstruksi jalan harus dipelihara secara terus
+                        menerus. Di samping jalan, kanal juga perlu dipelihara
+                        secara teratur sebagai rute transportasi, aliran
+                        irigasi, dan aliran drainase. PT Trakindo Utama memiliki
+                        alat berat pilihan terbaik untuk pemeliharaan
+                        Infrastruktur kelapa sawit menggunakan Cat Hydraulic
+                        Excavator (320D2, 313D2 LGP, 305,5), Cat Track Type
+                        Tractors (D3K XL), dan Cat Backhoe Loader (416F).
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        5. Mill
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Tandan Buah Segar (Fress Fruit Bunches – FFB) yang
+                        diterima di pabrik akan dipilah pilah di loading ramp
+                        untuk memastikan standar mutu FFB terpenuhi. Setelah
+                        itu, melalui beberapa perlakuan khusus, FFB akan diperas
+                        untuk mengekstrak kandungan minyaknya. Limbah dari
+                        proses ini dapat digunakan lagi sebagai bahan bakar
+                        biomassa, bahan organik yang berkaitan, atau sebagai
+                        bahan untuk produk yang berbeda. Kami memiliki alat
+                        berat pilihan terbaik untuk Pabrik Kelapa Sawit dan
+                        Pengolahan Limbah menggunakan Cat Wheel Loader 924K, Cat
+                        Backhoe Loader 416F, Cat Skid Steer Loader 226B2, Cat
+                        Diesel Generator set C Series (C13, C15, dan C18), dan
+                        pemanfaatan POME menggunakan Cat Gas Generator set CG
+                        Series (CG170, CG132).
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        6. Energi Listrik dari POME.
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Gas metana yang dihasilkan dari POME (Palm Oil Mill
+                        Effluent) oleh bakteri anaerob yang ada di kolam adalah
+                        gas yang paling berbahaya bagi lingkungan. Biasanya
+                        pabrik kelapa sawit membangun banyak kolam untuk
+                        pengolahan POME tanpa mempertimbangkan gas metana yang
+                        akan terlepas ke atmosfer, yang pada akhirnya akan
+                        menciptakan pemanasan global. Saat ini sudah ada
+                        teknologi untuk menangkap gas metana dan mengubahnya
+                        menjadi energi melalui aplikasi generator berbahan bakar
+                        gas. Caterpillar telah mengumumkan produk Cat CG (MWM
+                        diakuisisi pada tahun 2011) untuk aplikasi ini.Produk
+                        Cat CG memiliki tiga (3) model yaitu Cat CG132, CG170
+                        dan CG260 dengan rating bervariasi dari 400kW hingga
+                        3.370kW dalam aplikasi biogas. Beberapa perusahaan
+                        pertanian telah mengadopsi dan menjalankan teknologi ini
+                        untuk mendapatkan sertifikat “Hijau/Ramah lingkungan”
+                        bagi produk CPO mereka.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="px-8 py-10"
+                    v-bind:class="{
+                      hidden: openTab !== 2,
+                      block: openTab === 2,
+                    }"
+                  >
+                    <div
+                      class="flex-col xl:flex-row items-center flex space-x-0 xl:space-x-5"
+                    >
+                      <div
+                        class="space-y-1 pt-5 xl:pt-0 xl:space-y-3 xl:w-[70%] order-last xl:order-first"
+                      >
+                        <h3
+                          class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3"
+                        >
+                          1. Infrastruktur
+                        </h3>
+                        <hr class="bg-black p-0.5" />
+                        <p class="lg:text-base text-sm">
+                          Sebelum pengambilan pohon dari daerah penanaman, hal
+                          pertama yang harus dibangun adalah akses jalan, kanal,
+                          tempat tinggal untuk pekerja dan bengkel untuk
+                          peralatan dan alat-alat pemeliharaan. PT Trakindo
+                          Utama memiliki pilihan alat berat terbaik untuk
+                          kegiatan persiapan infrastruktur menggunakan Cat
+                          Hydraulic Excavator (320D2, 313D2 LGP), Cat Track Type
+                          Tractors / Dozer (D5R XL, D6R XL), Cat Motor Grader
+                          (120K), and Cat Vibratory Soil Compactor (CS-533).
+                        </p>
+                      </div>
+                      <div class="infra-img">
+                        <img
+                          class="xl:h-[20rem] h-[15rem]"
+                          src="assets/img/insfrastuktur.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        2. Pemanenan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Pada tahap ini, pohon ditebang menggunakan gergaji,
+                        felling head, atau harvester head. Kayu log kemudian
+                        dibersihkan dari cabang-cabangnya dengan menggunakan
+                        parang, gergaji, atau harvester head. Setelah ditebang,
+                        kontraktor akan menyediakan debarked log jika diminta
+                        oleh pembeli. Log kemudian dipotong dengan panjang
+                        standar tertentu. PT Trakindo Utama memiliki pilihan
+                        alat berat terbaik untuk kegiatan pemanenan menggunakan
+                        Cat Hydraulic Excavator (320D2, 313D2 LGP) dengan SP 591
+                        LX Harvester Head.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        3. Ekstraksi
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Setelah dipanen, log ditumpuk dan diekstraksi ke TPN
+                        (tempat penimbunan kayu) selain hauling road menggunakan
+                        perahu, skidder, forwarder atau “sampan darat” –
+                        modifikasi excavator dengan penyimpanan log di belakang
+                        untuk mengekstrak log. PT Trakindo Utama memiliki
+                        pilihan unit yang terbaik untuk kegiatan ekstraksi
+                        menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                        dengan Fixed Grapple atau menggunakan Cat Wheel Skidder
+                        525.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        4. Pengolahan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Dalam tahap ini, log yang belum debarked pada tahap
+                        panen, akan dilakukan debarked dengan menggunakan
+                        processing head, atau menggunakan metodologi lain selama
+                        diterima oleh pembeli. Hasil dari tahap ini adalah semua
+                        log telah memenuhi panjang yang telah ditentukan dan
+                        sudah dalam kondisi debarked. Untuk kegiatan pengolahan,
+                        PT Trakindo Utama memiliki pilihan unit yang terbaik
+                        menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                        dengan SP 591 LX Harvester Head.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        5. Penumpukan / Pemuatan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Log yang diterima dari pengolahan atau pemanenan
+                        kemudian ditumpuk di TPN (tempat penimbunan kayu). Log
+                        kemudian dimuat ke truk untuk pengiriman ke tempat
+                        penimbunan pabrik atau kadang-kadang langsung diumpankan
+                        ke tempat pengumpan. Kami menyediakan Cat Hydraulic
+                        Excavator (320D2, 313D2 LGP) dengan Randall Rotating
+                        Grapple, atau Fixed Grapple untuk aplikasi penyusunan
+                        atau pemuatan bertingkat.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        6. Mill Yard
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Di lokasi Mill Yard, log ditumpuk untuk memastikan
+                        pabrik pulp dapat beroperasi terus menerus. Cat 320DFM
+                        untuk operasi di Mill Yard merupakan pilihan terbaik.
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="px-8 py-10"
+                    v-bind:class="{
+                      hidden: openTab !== 3,
+                      block: openTab === 3,
+                    }"
+                  >
+                    <div
+                      class="flex-col xl:flex-row items-center flex space-x-0 xl:space-x-5"
+                    >
+                      <div
+                        class="space-y-1 pt-5 xl:pt-0 xl:space-y-3 xl:w-[70%] order-last xl:order-first"
+                      >
+                        <h3
+                          class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3"
+                        >
+                          1. Infrastruktur
+                        </h3>
+                        <hr class="bg-black p-0.5" />
+                        <p class="lg:text-base text-sm">
+                          Sebelum pengambilan pohon dari daerah penanaman, hal
+                          pertama yang harus dibangun adalah akses jalan, kanal,
+                          tempat tinggal untuk pekerja dan bengkel untuk
+                          peralatan dan alat-alat pemeliharaan. PT Trakindo
+                          Utama memiliki pilihan alat berat terbaik untuk
+                          kegiatan persiapan infrastruktur menggunakan Cat
+                          Hydraulic Excavator (320D2, 313D2 LGP), Cat Track Type
+                          Tractors / Dozer (D5R XL, D6R XL), Cat Motor Grader
+                          (120K), and Cat Vibratory Soil Compactor (CS-533).
+                        </p>
+                      </div>
+                      <div class="infra-img">
+                        <img
+                          class="xl:h-[20rem] h-[15rem]"
+                          src="assets/img/insfrastuktur.jpg"
+                        />
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        2. Pemanenan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Pada tahap ini, pohon ditebang menggunakan gergaji,
+                        felling head, atau harvester head. Kayu log kemudian
+                        dibersihkan dari cabang-cabangnya dengan menggunakan
+                        parang, gergaji, atau harvester head. Setelah ditebang,
+                        kontraktor akan menyediakan debarked log jika diminta
+                        oleh pembeli. Log kemudian dipotong dengan panjang
+                        standar tertentu. PT Trakindo Utama memiliki pilihan
+                        alat berat terbaik untuk kegiatan pemanenan menggunakan
+                        Cat Hydraulic Excavator (320D2, 313D2 LGP) dengan SP 591
+                        LX Harvester Head.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        3. Ekstraksi
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Setelah dipanen, log ditumpuk dan diekstraksi ke TPN
+                        (tempat penimbunan kayu) selain hauling road menggunakan
+                        perahu, skidder, forwarder atau “sampan darat” –
+                        modifikasi excavator dengan penyimpanan log di belakang
+                        untuk mengekstrak log. PT Trakindo Utama memiliki
+                        pilihan unit yang terbaik untuk kegiatan ekstraksi
+                        menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                        dengan Fixed Grapple atau menggunakan Cat Wheel Skidder
+                        525.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        4. Pengolahan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Dalam tahap ini, log yang belum debarked pada tahap
+                        panen, akan dilakukan debarked dengan menggunakan
+                        processing head, atau menggunakan metodologi lain selama
+                        diterima oleh pembeli. Hasil dari tahap ini adalah semua
+                        log telah memenuhi panjang yang telah ditentukan dan
+                        sudah dalam kondisi debarked. Untuk kegiatan pengolahan,
+                        PT Trakindo Utama memiliki pilihan unit yang terbaik
+                        menggunakan Cat Hydraulic Excavator (320D2, 313D2 LGP)
+                        dengan SP 591 LX Harvester Head.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        5. Penumpukan / Pemuatan
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Log yang diterima dari pengolahan atau pemanenan
+                        kemudian ditumpuk di TPN (tempat penimbunan kayu). Log
+                        kemudian dimuat ke truk untuk pengiriman ke tempat
+                        penimbunan pabrik atau kadang-kadang langsung diumpankan
+                        ke tempat pengumpan. Kami menyediakan Cat Hydraulic
+                        Excavator (320D2, 313D2 LGP) dengan Randall Rotating
+                        Grapple, atau Fixed Grapple untuk aplikasi penyusunan
+                        atau pemuatan bertingkat.
+                      </div>
+                    </div>
+                    <div>
+                      <h3
+                        class="lg:text-xl md:text-lg sm:text-base text-sm font-bold p-3 py-6"
+                      >
+                        6. Mill Yard
+                      </h3>
+                      <hr class="bg-black p-0.5" />
+                      <div class="lg:text-base text-sm pt-4">
+                        Di lokasi Mill Yard, log ditumpuk untuk memastikan
+                        pabrik pulp dapat beroperasi terus menerus. Cat 320DFM
+                        untuk operasi di Mill Yard merupakan pilihan terbaik.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <a class="bg-yellow-400 text-white lg:py-3 py-1 lg:px-6 px-2 lg:rounded-lg rounded" href="#">Cat Financial</a>
-        </div>
-        <div class="w-3/12">
-          <img class="lg:h-64 md:h-56 sm:h-44 h-32 lg:w-64 md:w-56 sm:w-44 w-32" src="https://fajarcorp.com/wp-content/uploads/2021/11/adeolu-eletu-E7RLgUjjazc-unsplash-600x397.jpg" alt="">
         </div>
       </div>
     </div>
-    <Footer/>
+    <div id="footer">
+      <div class="wrap container mx-auto lg:py-32 md:py-8 py-6 px-4">
+        <div class="flex space-x-4 text-center place-content-center">
+          <div class="w-3/4 mr-2">
+            <h3 class="text-white font-bold lg:font-normal lg:text-4xl">
+              PEMBIAYAAN
+            </h3>
+            <div class="pt-8 mb-8 text-white">
+              Untuk membantu pelanggan sektor kehutanan dalam membeli alat berat
+              Cat, Trakindo dapat membantu Anda dalam berhubungan dengan
+              berbagai institusi keuangan rekanan kami. Kami akan memastikan
+              bisnis Anda dapat memperoleh solusi pembayaran yang sesuai dengan
+              kebutuhan dan keperluan operasi kehutanan Anda.
+            </div>
+            <a
+              class="bg-red-500 text-white lg:py-3 lg:px-6 px-2 py-2 lg:rounded-lg rounded"
+              href="#"
+              >Chat Financial</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <Footer />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Kehutanan',
-  data () {
+  name: "Kehutanan",
+  data() {
     return {
-      title: 'Kehutanan - Fajar Corp',
-      openTab: 1
-    }
+      title: "Kehutanan - Fajar Corp",
+      openTab: 1,
+    };
   },
-  head () {
+  head() {
     return {
       title: this.title,
       meta: [
         {
-          hid: 'description',
-          name: 'description',
-          content: 'Fajar Corp - Melayani Dengan Teknologi, Mutu, dan Harga Terbaik'
-        }
-      ]
-    }
+          hid: "description",
+          name: "description",
+          content:
+            "Fajar Corp - Melayani Dengan Teknologi, Mutu, dan Harga Terbaik",
+        },
+      ],
+    };
   },
   methods: {
-    toggleTabs: function(tabNumber) {
-      this.openTab = tabNumber
-    }
-  }
-}
+    toggleTabs: function (tabNumber) {
+      this.openTab = tabNumber;
+    },
+  },
+};
 </script>
+<style lang="css">
+#footer {
+  background-image: url("/assets/img/footer-bg.png");
+}
+</style>

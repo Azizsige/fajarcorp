@@ -2,15 +2,7 @@
   <div>
     <Navbar />
     <div class="wrapper text-center pb-5">
-      <div
-        id="hero"
-        class="icon h-[75vh] mb-5 flex justify-center items-center"
-      >
-        <font-awesome-icon
-          icon="fa-solid fa-circle-play"
-          class="text-white text-6xl xl:text-8xl"
-        />
-      </div>
+      <HeroIndustri id="kehutanan" />
       <div class="button">
         <button
           type="submit"
@@ -26,14 +18,7 @@
         class="container flex flex-col space-y-7 xl:space-y-0 xl:flex-row items-center xl:space-x-8 mx-auto lg:py-16 md:py-8 py-4 px-8"
       >
         <div class="img">
-          <!-- <img
-            class="w-[165rem] h-96"
-            src="assets/img/kehutanan.jpg"
-            alt=""
-            srcset=""
-          /> -->
-          <ClipPara
-            id="clip_para"
+          <ClipIndustri
             class="w-[225rem] h-[18rem] xl:h-96"
             src="assets/img/kehutanan.jpg"
           />
@@ -573,23 +558,5 @@ export default {
 <style lang="css">
 #footer {
   background-image: url("/assets/img/footer-bg.png");
-}
-
-#hero {
-  background-image: url("/assets/img/hero-bg.webp");
-  background-size: cover;
-  object-fit: cover;
-  object-position: center;
-}
-
-.img.clip_para {
-  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 100% 0%, 75% 100%, 0% 100%);
-}
-
-#clip_para {
-  -webkit-clip-path: polygon(0% 0%, 88% 0%, 100% 100%, 0% 100%);
-  clip-path: polygon(0% 0%, 88% 0%, 100% 100%, 0% 100%);
-  border-radius: 15px;
 }
 </style>
